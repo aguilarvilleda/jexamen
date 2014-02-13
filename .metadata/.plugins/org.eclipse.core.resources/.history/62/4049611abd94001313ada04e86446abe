@@ -17,7 +17,7 @@ public class MyGdxGame implements ApplicationListener {
 	private Sprite sprite;
 	private Sprite spritekiss;
 	private Texture texturakiss;
-	float mover=0;
+	int mover=0;
 	
 	@Override
 	public void create() {		
@@ -39,7 +39,7 @@ public class MyGdxGame implements ApplicationListener {
 		
 		texturakiss = new Texture(Gdx.files.internal("data/Kiss.png"));
 		spritekiss = new Sprite(texturakiss,35,35);
-		spritekiss.setPosition(-0.3f,-0.7f);
+		spritekiss.setPosition(0,-0.7f);
 		spritekiss.setSize(0.5f, 0.5f);
 	}
 
@@ -59,9 +59,9 @@ public class MyGdxGame implements ApplicationListener {
 		sprite.draw(batch);
 		spritekiss.draw(batch);
 		batch.end();
-		spritekiss.setPosition(mover,-0.1f);
+		spritekiss.setPosition(0,-0.1f);
 		if(Gdx.input.isTouched()){		
-			mover+=-0.01;
+			mover++;
 		}
 	}
 

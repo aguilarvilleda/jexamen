@@ -61,7 +61,7 @@ public class MyGdxGame implements ApplicationListener {
 		batch.end();
 		spritekiss.setPosition(mover,-0.1f);
 		if(Gdx.input.isTouched()){		
-			mover+=-0.01;
+			mover+=0.01;
 		}
 	}
 

@@ -17,7 +17,7 @@ public class MyGdxGame implements ApplicationListener {
 	private Sprite sprite;
 	private Sprite spritekiss;
 	private Texture texturakiss;
-	float mover=0;
+	int mover=0;
 	
 	@Override
 	public void create() {		
@@ -61,7 +61,7 @@ public class MyGdxGame implements ApplicationListener {
 		batch.end();
 		spritekiss.setPosition(mover,-0.1f);
 		if(Gdx.input.isTouched()){		
-			mover+=-0.01;
+			mover++;
 		}
 	}
 
